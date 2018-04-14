@@ -1,10 +1,17 @@
 {
+  "files": [
+    "refactored_code/main.ts",
+    "refactored_code/greeter.ts",
+    "refactored_code/controllers.ts",
+    "refactored_code/data.ts",
+    "refactored_code/managers.ts",
+    "refactored_code/models.ts",
+    "refactored_code/services.ts",
+    "refactored_code/types.ts",
+    "refactored_code/utils.ts",
+  ],
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "noImplicitAny": false,
+    "target": "es5"
+  }
 }

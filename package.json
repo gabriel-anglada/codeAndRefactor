@@ -1,0 +1,24 @@
+{
+  "name": "code_and_refactor",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^4.0.2",
+    "typescript": "^2.3.4"
+  },
+  "description": "refactor for Alten",
+  "main": "./dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielAnglada/codeAndRefactor.git"
+  },
+  "author": "Gabriel Anglada",
+  "bugs": {
+    "url": "https://github.com/gabrielAnglada/codeAndRefactor/issues"
+  },
+  "homepage": "https://github.com/gabrielAnglada/codeAndRefactor#readme"
+}
