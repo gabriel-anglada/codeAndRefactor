@@ -3,6 +3,11 @@ import {Utils} from "./utils";
 import {SummaryModel, EntryModel, SummaryRegion} from "./models";
 
 export class EntryManager {
+    /**
+     * Calculate summary by a given array of region entries
+     * @param entries
+     * @returns {SummaryModel}
+     */
     generateSummary(entries: EntryModel[]): SummaryModel {
         const summary: SummaryModel = new SummaryModel();
 
@@ -27,26 +32,3 @@ export class EntryManager {
         return summary;
     }
 }
-
-/*
- for (let comarca of data.entry) {
-     let comarcaTotal = comarca['cross:DataSet']['cross:Section']['cross:Obs'][2].OBS_VALUE;
-     let mp = calcPercent(comarca['cross:DataSet']['cross:Section']['cross:Obs'][0], comarcaTotal);
-     let fp = calcPercent(comarca['cross:DataSet']['cross:Section']['cross:Obs'][1], comarcaTotal);
-     let summaryComarca = {
-         'name': comarca.title,
-         'malePercent': mp,
-         'femalePercent': fp
-     }
-     if (mp > fp) {
-        summary.stats.numeroComarcasMasHombres++;
-     } else {
-        summary.stats.numeroComarcasMasMujeres++;
-     }
-     summary.entry.push(summaryComarca);
-     summary.stats.numeroComarcasTotal++;
-     summary.stats.numeroTotalHabitantesHombres += Number(comarca['cross:DataSet']['cross:Section']['cross:Obs'][0].OBS_VALUE);
-     summary.stats.numeroTotalHabitantesMujeres += Number(comarca['cross:DataSet']['cross:Section']['cross:Obs'][1].OBS_VALUE);
-     summary.stats.numeroTotalHabitantes += summary.stats.numeroTotalHabitantesHombres + summary.stats.numeroTotalHabitantesMujeres; //suma incorrecte, summary.stats.numeroTotalHabitantesHombres és el total actual, no l'increment
- }
- */

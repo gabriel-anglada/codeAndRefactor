@@ -1,6 +1,7 @@
 'use_strict';
+import {IJSONAble} from "./interfaces";
 
-export class ObsModel {
+export class ObsModel implements IJSONAble {
     constructor(data: any) {
         this.fromJSON(data);
     }
@@ -22,9 +23,16 @@ export class ObsModel {
         this._sex = data['SEX'];
         this._value = parseInt(data['OBS_VALUE']);
     }
+
+    /**
+     * Not implemented because dta is not needed to update in server side
+     */
+    toJSON(): any {
+        return {};
+    }
 }
 
-export class SectionModel {
+export class SectionModel implements IJSONAble {
     constructor(data: any) {
         this.fromJSON(data);
     }
@@ -63,9 +71,16 @@ export class SectionModel {
         this._timePeriod = data['TIME_PERIOD'];
         this._unitMult = data['UNIT_MULT'];
     }
+
+    /**
+     * Not implemented because dta is not needed to update in server side
+     */
+    toJSON(): any {
+        return {};
+    }
 }
 
-export class DataSetModel {
+export class DataSetModel implements IJSONAble {
     constructor(data: any) {
         this.fromJSON(data);
     }
@@ -78,9 +93,16 @@ export class DataSetModel {
     fromJSON(data: any) {
         this._section = new SectionModel(data['cross:Section']);
     }
+
+    /**
+     * Not implemented because dta is not needed to update in server side
+     */
+    toJSON(): any {
+        return {};
+    }
 }
 
-export class EntryModel {
+export class EntryModel implements IJSONAble {
     constructor(data: any) {
         this.fromJSON(data);
     }
@@ -128,6 +150,13 @@ export class EntryModel {
         this._categories = data['category'];
         this._updatedAt = new Date(data['updatedAt']);
         this._content = data['content'];
+    }
+
+    /**
+     * Not implemented because dta is not needed to update in server side
+     */
+    toJSON(): any {
+        return {};
     }
 }
 
@@ -200,23 +229,14 @@ export class SummaryRegion {
     set name(value: string) {
         this._name = value;
     }
-    get name(): string {
-        return this._name;
-    }
 
     private _malePercent: number = 0;
     set malePercent(value: number) {
         this._malePercent = value;
     }
-    get malePercent(): number {
-        return this._malePercent;
-    }
 
     private _femalePercent: number = 0;
     set femalePercent(value: number) {
         this._femalePercent = value;
-    }
-    get femalePercent(): number {
-        return this._femalePercent;
     }
 }
