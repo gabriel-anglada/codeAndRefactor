@@ -13,6 +13,7 @@ Node and npm
 ## Install
 
 ```
+npm install --global gulp-cli
 npm install
 ``` 
 
@@ -22,5 +23,5 @@ Run in terminal:
 
 ```
 gulp
-node dist/main.ts
+node dist/main.js
 ``` 
