@@ -4,7 +4,7 @@ This is the refactored code. The main idea behind this refactor is to separate a
 
 The main bootstrap file is **main.ts** located in *refactored_code/* folder.
 
-Some comments has been added through the documentation but, if any question or suggestion before the interview, you can contact me via email.
+Some comments have been added through the documentation, if any questions or suggestions arise before the interview, you can contact me via email.
 
 ## Requirements
 
