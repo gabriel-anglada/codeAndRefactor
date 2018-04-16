@@ -1,9 +1,9 @@
 {
   "files": [
     "refactored_code/main.ts",
-    "refactored_code/greeter.ts",
     "refactored_code/controllers.ts",
     "refactored_code/data.ts",
+    "refactored_code/interfaces.ts",
     "refactored_code/managers.ts",
     "refactored_code/models.ts",
     "refactored_code/services.ts",
